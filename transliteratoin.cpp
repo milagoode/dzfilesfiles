@@ -6,29 +6,29 @@ using namespace std;
 
 string translit_char(char c) {
     switch (c) {
-    case 'à': return "a"; case 'á': return "b"; case 'â': return "v";
-    case 'ã': return "h"; case '´': return "g"; case 'ä': return "d";
-    case 'å': return "e"; case 'º': return "ye"; case 'æ': return "zh";
-    case 'ç': return "z"; case 'è': return "y"; case '³': return "i";
-    case '¿': return "yi"; case 'é': return "j"; case 'ê': return "k";
-    case 'ë': return "l"; case 'ì': return "m"; case 'í': return "n";
-    case 'î': return "o"; case 'ï': return "p"; case 'ð': return "r";
-    case 'ñ': return "s"; case 'ò': return "t"; case 'ó': return "u";
-    case 'ô': return "f"; case 'õ': return "kh"; case 'ö': return "ts";
-    case '÷': return "ch"; case 'ø': return "sh"; case 'ù': return "shch";
-    case 'ü': return ""; case 'þ': return "yu"; case 'ÿ': return "ya";
+    case 'Ð°': return "a"; case 'Ð±': return "b"; case 'Ð²': return "v";
+    case 'Ð³': return "h"; case 'Ò‘': return "g"; case 'Ð´': return "d";
+    case 'Ðµ': return "e"; case 'Ñ”': return "ye"; case 'Ð¶': return "zh";
+    case 'Ð·': return "z"; case 'Ð¸': return "y"; case 'Ñ–': return "i";
+    case 'Ñ—': return "yi"; case 'Ð¹': return "j"; case 'Ðº': return "k";
+    case 'Ð»': return "l"; case 'Ð¼': return "m"; case 'Ð½': return "n";
+    case 'Ð¾': return "o"; case 'Ð¿': return "p"; case 'Ñ€': return "r";
+    case 'Ñ': return "s"; case 'Ñ‚': return "t"; case 'Ñƒ': return "u";
+    case 'Ñ„': return "f"; case 'Ñ…': return "kh"; case 'Ñ†': return "ts";
+    case 'Ñ‡': return "ch"; case 'Ñˆ': return "sh"; case 'Ñ‰': return "shch";
+    case 'ÑŒ': return ""; case 'ÑŽ': return "yu"; case 'Ñ': return "ya";
 
-    case 'À': return "A"; case 'Á': return "B"; case 'Â': return "V";
-    case 'Ã': return "H"; case '¥': return "G"; case 'Ä': return "D";
-    case 'Å': return "E"; case 'ª': return "Ye"; case 'Æ': return "Zh";
-    case 'Ç': return "Z"; case 'È': return "Y"; case '²': return "I";
-    case '¯': return "Yi"; case 'É': return "J"; case 'Ê': return "K";
-    case 'Ë': return "L"; case 'Ì': return "M"; case 'Í': return "N";
-    case 'Î': return "O"; case 'Ï': return "P"; case 'Ð': return "R";
-    case 'Ñ': return "S"; case 'Ò': return "T"; case 'Ó': return "U";
-    case 'Ô': return "F"; case 'Õ': return "Kh"; case 'Ö': return "Ts";
-    case '×': return "Ch"; case 'Ø': return "Sh"; case 'Ù': return "Shch";
-    case 'Þ': return "Yu"; case 'ß': return "Ya";
+    case 'Ð': return "A"; case 'Ð‘': return "B"; case 'Ð’': return "V";
+    case 'Ð“': return "H"; case 'Ò': return "G"; case 'Ð”': return "D";
+    case 'Ð•': return "E"; case 'Ð„': return "Ye"; case 'Ð–': return "Zh";
+    case 'Ð—': return "Z"; case 'Ð˜': return "Y"; case 'Ð†': return "I";
+    case 'Ð‡': return "Yi"; case 'Ð™': return "J"; case 'Ðš': return "K";
+    case 'Ð›': return "L"; case 'Ðœ': return "M"; case 'Ð': return "N";
+    case 'Ðž': return "O"; case 'ÐŸ': return "P"; case 'Ð ': return "R";
+    case 'Ð¡': return "S"; case 'Ð¢': return "T"; case 'Ð£': return "U";
+    case 'Ð¤': return "F"; case 'Ð¥': return "Kh"; case 'Ð¦': return "Ts";
+    case 'Ð§': return "Ch"; case 'Ð¨': return "Sh"; case 'Ð©': return "Shch";
+    case 'Ð®': return "Yu"; case 'Ð¯': return "Ya";
 
     default: return string(1, c);
     }
@@ -36,16 +36,16 @@ string translit_char(char c) {
 
 int transliteration() {
     system("chcp 1251>null");
-    cout << "\t\n\tÒðàíñë³òåðàö³ÿ\n\n";
+    cout << "\t\n\tÐ¢Ñ€Ð°Ð½ÑÐ»Ñ–Ñ‚ÐµÑ€Ð°Ñ†Ñ–Ñ\n\n";
     ifstream input("ukrainian_text.txt");
     if (!input) {
-        cout << "Ôàéë íå çíàéäåíî\n";
+        cout << "Ð¤Ð°Ð¹Ð» Ð½Ðµ Ð·Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾\n";
         return 1;
     }
 
     ofstream output("transliterated_text.txt");
     if (!output) {
-        cout << "Íå âäàëîñÿ ñòâîðèòè ôàéë äëÿ çàïèñó\n";
+        cout << "ÐÐµ Ð²Ð´Ð°Ð»Ð¾ÑÑ ÑÑ‚Ð²Ð¾Ñ€Ð¸Ñ‚Ð¸ Ñ„Ð°Ð¹Ð» Ð´Ð»Ñ Ð·Ð°Ð¿Ð¸ÑÑƒ\n";
         return 1;
     }
 
@@ -57,8 +57,9 @@ int transliteration() {
         output << endl;
     }
 
-    cout << "Òðàíñë³òåðàö³ÿ çàâåðøåíà. Ðåçóëüòàò ó ôàéë³ transliterated_text.txt\n";
+    cout << "Ð¢Ñ€Ð°Ð½ÑÐ»Ñ–Ñ‚ÐµÑ€Ð°Ñ†Ñ–Ñ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð°. Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ñƒ Ñ„Ð°Ð¹Ð»Ñ– transliterated_text.txt\n";
     input.close();
     output.close();
     return 0;
 }
+
