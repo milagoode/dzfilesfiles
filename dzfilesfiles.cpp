@@ -6,15 +6,15 @@ using namespace std;
 
 int main() {
     system("chcp 1251>null");
-    cout << "\tÌåíþ\n1) Îö³íêè ñòóäåíò³â\n2) Ô³ëüòðàö³ÿ íåïðèéíÿòíèõ ñë³â\n3) Òðàíñë³òåðàö³ÿ\nÂàø âèá³ð: ";
+    cout << "\tÐœÐµÐ½ÑŽ\n1) ÐžÑ†Ñ–Ð½ÐºÐ¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ–Ð²\n2) Ð¤Ñ–Ð»ÑŒÑ‚Ñ€Ð°Ñ†Ñ–Ñ Ð½ÐµÐ¿Ñ€Ð¸Ð¹Ð½ÑÑ‚Ð½Ð¸Ñ… ÑÐ»Ñ–Ð²\n3) Ð¢Ñ€Ð°Ð½ÑÐ»Ñ–Ñ‚ÐµÑ€Ð°Ñ†Ñ–Ñ\nÐ’Ð°Ñˆ Ð²Ð¸Ð±Ñ–Ñ€: ";
     short choice;
     cin >> choice;
 
     switch (choice) {
     case 1: student_grades(); break;
-    case 2: cout << "\t\n\tíå ä³éøëî ÿê çðîáèòè(((((\n\n"; break;
+    case 2: cout << "\t\n\tÐ½Ðµ Ð´Ñ–Ð¹ÑˆÐ»Ð¾ ÑÐº Ð·Ñ€Ð¾Ð±Ð¸Ñ‚Ð¸(((((\n\n"; break;
     case 3: transliteration(); break;
-    default: cout << "Íåâ³ðíèé âèá³ð\n"; break;
+    default: cout << "ÐÐµÐ²Ñ–Ñ€Ð½Ð¸Ð¹ Ð²Ð¸Ð±Ñ–Ñ€\n"; break;
     }
 
     return 0;
