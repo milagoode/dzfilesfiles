@@ -7,11 +7,11 @@ using namespace std;
 
 int student_grades() {
     system("chcp 1251>null");
-    cout << "\t\n\tÎö³íêè ñòóäåíò³â\n\n";
+    cout << "\t\n\tÐžÑ†Ñ–Ð½ÐºÐ¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ–Ð²\n\n";
 
     ifstream file("students.txt");
     if (!file) {
-        cout << "Ôàéë íå çíàéäåíî\n";
+        cout << "Ð¤Ð°Ð¹Ð» Ð½Ðµ Ð·Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾\n";
         return 1;
     }
 
@@ -19,11 +19,11 @@ int student_grades() {
     int grade;
     short total_students = 0;
     short total_score = 0;
-    cout << "Ââåä³òü áàë äëÿ ô³ëüòðàö³¿ ñòóäåíò³â: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð±Ð°Ð» Ð´Ð»Ñ Ñ„Ñ–Ð»ÑŒÑ‚Ñ€Ð°Ñ†Ñ–Ñ— ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ–Ð²: ";
     int threshold;
     cin >> threshold;
 
-    cout << "\nÑòóäåíòè ç îö³íêîþ ìåíøå " << threshold << ":\n";
+    cout << "\nÐ¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¸ Ð· Ð¾Ñ†Ñ–Ð½ÐºÐ¾ÑŽ Ð¼ÐµÐ½ÑˆÐµ " << threshold << ":\n";
 
     bool no_students_below_threshold = true;
 
@@ -36,14 +36,14 @@ int student_grades() {
         total_students++;
     }
     if (no_students_below_threshold) {
-        cout << "Âñ³ ñòóäåíòè ìàþòü îö³íêè âèù³ àáî ð³âí³ " << threshold << ".\n";
+        cout << "Ð’ÑÑ– ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¸ Ð¼Ð°ÑŽÑ‚ÑŒ Ð¾Ñ†Ñ–Ð½ÐºÐ¸ Ð²Ð¸Ñ‰Ñ– Ð°Ð±Ð¾ Ñ€Ñ–Ð²Ð½Ñ– " << threshold << ".\n";
     }
 
     if (total_students > 0) {
-        cout << "\nÑåðåäí³é áàë: " << static_cast<float>(total_score) / total_students << endl;
+        cout << "\nÐ¡ÐµÑ€ÐµÐ´Ð½Ñ–Ð¹ Ð±Ð°Ð»: " << static_cast<float>(total_score) / total_students << endl;
     }
     else {
-        cout << "Íåìàº ñòóäåíò³â äëÿ îáðîáêè.\n";
+        cout << "ÐÐµÐ¼Ð°Ñ” ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ–Ð² Ð´Ð»Ñ Ð¾Ð±Ñ€Ð¾Ð±ÐºÐ¸.\n";
     }
     file.close();
     return 0;
